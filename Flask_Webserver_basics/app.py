@@ -1,12 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
-
+#set up index route
 @app.route("/", methods=["GET"])
 def first_route():
-    return "You issued a GET request"
+    return render_template("index.HTML")
  
 
 if __name__ == "__main__":
