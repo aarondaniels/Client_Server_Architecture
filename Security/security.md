@@ -3,6 +3,7 @@ Authentication: Who are you?
 Auhorization: What are you allowed to do? 
 
 # Open SSL
+
 OpenSSL is a library used for communication and is used for encrypting and decrypting messages and files for security purposes.
 
 OpenSSL works with private and public keys to encrypt and decrypt text using Terminal window commands.
@@ -46,3 +47,28 @@ To decrypt a file using a key provided by another user, you will need to use the
 In the syntax above, the argument -decrypt signifies to decrypt the input data by using the RSA public key provided to you. The remainder of the command identifies the file to decrypt and names the decrypted file.
 
 Of course, there are many different types of encryption and decryption methods that can be used dependent on needs. However, the RSA method is the most popular and simplest to use. Feel free to review the official OpenSSL Documentation (Links to an external site.) for further exploration.
+
+# OAuth2
+OAuth is an authorization protocol that describes how unrelated servers and services can safely allow authenticated access to their assets without actually using login credentials. OAuth was first created in 2010; the more recent and more popular version, OAuth2, was released in 2012.
+
+The simplest example of how to use OAuth is when you want to log in to a website and it offers you the possibility of using other credentials from other websites. What happens in these cases is that you choose the website that will authenticate you, and it will communicate to the original website you are trying to access that your credentials are correct, thus granting you access.
+
+In other words, OAuth helps a user accomplish something, such as logging on, between two unrelated websites.
+
+The key detail to remember about OAuth is that it’s focus is on authorization, not authentication. Authentication is the process of a user providing a password to prove their identity. Authorization is the process of letting a subject access resources after successful authentication.
+
+# What Is Okta?
+
+Okta is a platform that enables multiple users (for example users working for the same company) to access various software with the same login. The main reason why organizations use Okta is to allow access to the cloud and services without using single authentications. This means easier access to software through a platform that is secure and reliable.
+
+# API Token Management with Okta
+
+“API tokens are used to authenticate requests to the Okta API just like HTTP cookies authenticate requests to the Okta Application with your browser. An API token is issued for a specific user and all requests with the token act on behalf of the user. API tokens are secrets and should be treated like passwords.
+
+API tokens are generated with the permissions of the user that created the token. If a user’s permissions change, then so does that of the token. API tokens are valid for 30 days and automatically renew every time they are used with an API request. When a token has been inactive for more than 30 days, it is revoked and cannot be used again.
+
+Tokens are also only valid if the user who created the token is also active. Tokens issued by deactivated users are rejected. If the user account is reactivated, the API token is accepted with no other action required.
+
+With OAuth2 for Okta, you are able to interact with Okta APIs using scoped OAuth2 access tokens. Each access token enables you to perform specific actions on specific Okta APIs with ability controlled by which scopes the access token contains.
+
+In summary, OAuth2 is an authorization protocol used for accessing services without specific login credentials for those services. Okta can be used in conjunction with OAuth2 to create API tokens that authenticate requests for users.
